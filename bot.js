@@ -21,15 +21,14 @@ function log(title, col, fds){
   logch.send(new Discord.MessageEmbed().setColor(col).setTitle(title).setAuthor("Kenobi > Logs").addFields(...f).setTimestamp())
 }
 bot.on("ready", () => {
-  console.log(bot.guilds)
-  logch = bot.guilds._cache.find(a => a.id="699267121359749180").channels._cache.find(a => a.name == "logs")
+  logch = bot.guilds.find(a => a.id="699267121359749180").channels.find(a => a.name == "logs");
   //HOW TO USE LOG()
-  log("BOTSTATUS", "#333333", {"bot": "Windu", "status": "online"})
+  log("BOTSTATUS", "#333333", {"bot": "Windu", "status": "online"});
   //
   
 
   console.clear()
-	console.info(`Logged in as \u001b[36m${bot.user.tag.replace("#","\u001b[38;5;208m#")}\u001b[0m!`)
+	console.info(`Logged in as \u001b[36m${bot.user.tag.replace("#","\u001b[38;5;208m#")}\u001b[0m!`);
   bot.user.setActivity("STAR WARS", { type: "WATCHING" });
 });
 
