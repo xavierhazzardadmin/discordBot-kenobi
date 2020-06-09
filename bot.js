@@ -18,6 +18,7 @@ function log(title, col, fds){
   for(var i in fds){
     f.push({name:i.replace(/-/,"").replace(/^\\-/,"-"),value:fds[i],inline:fds[i][0]=="-"});
   }
+  console.log(f);
   logch.send(new Discord.MessageEmbed().setColor(col).setTitle(title).setAuthor("Kenobi > Logs").addFields(...f).setTimestamp())
 }
 bot.on("ready", () => {
