@@ -2,7 +2,7 @@ require("dotenv").config();
 var fs = require("fs");
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const TOKEN = process.env.token;
+const TOKEN = process.env.BOT_TOKEN;
 const app = require("express")();
 
 app.get("/", async function (req, res) {
