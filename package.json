@@ -1,11 +1,11 @@
 {
 	"name": "discord-bot",
 	"version": "1.0.0",
-	"description": "Discord bot for SitePoint",
-	"main": "index.js",
+	"description": "Discord bot for PicFunc",
+	"main": "bot.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node index.js"
+		"start": "node bot.js"
 	},
 	"author": "Michiel Mulders",
 	"license": "MIT",
