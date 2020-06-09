@@ -7,7 +7,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node bot.js"
 	},
-	"author": "Michiel Mulders",
+	"author": "xavierhazzardadmin",
 	"license": "MIT",
 	"dependencies": {
 		"discord.js": "^11.5.1",
