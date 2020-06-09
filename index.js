@@ -12,33 +12,8 @@ app.get("/", async function (req, res) {
 
 app.listen(3000);
 bot.login(TOKEN);
-var logch = { send: () => console.log("Bot not ready!") };
-function log(title, col, fds) {
-	var f = [];
-	for (var i in fds) {
-		f.push({
-			name: i.replace(/-/, "").replace(/^\\-/, "-"),
-			value: fds[i],
-			inline: fds[i][0] == "-",
-		});
-	}
-	logch.send(
-		new Discord.MessageEmbed()
-			.setColor(col)
-			.setTitle(title)
-			.setAuthor("LogCat > Logs")
-			.addFields(...f)
-			.setTimestamp()
-	);
-}
-bot.on("ready", () => {
-	logch = bot.guilds.cache
-		.find((a) => (a.id = "699267121359749180"))
-		.channels.cache.find((a) => a.name == "logs");
-	//HOW TO USE LOG()
-	log("BOTSTATUS", "#333333", { bot: "Windu", status: "online" });
-	//
 
+bot.on("ready", () => {
 	console.clear();
 	console.info(
 		`Logged in as \u001b[36m${bot.user.tag.replace(
