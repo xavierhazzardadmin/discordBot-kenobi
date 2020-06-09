@@ -18,13 +18,14 @@ function log(title, col, fds){
   for(var i in fds){
     f.push({name:i.replace(/-/,"").replace(/^\\-/,"-"),value:fds[i],inline:fds[i][0]=="-"});
   }
-  logch.send(new Discord.MessageEmbed().setColor(col).setTitle(title).setAuthor("LogCat > Logs").addFields(...f).setTimestamp())
+  logch.send(new Discord.MessageEmbed().setColor(col).setTitle(title).setAuthor("Kenobi > Logs").addFields(...f).setTimestamp())
 }
 bot.on("ready", () => {
   logch = bot.guilds._cache.find(a => a.id="699267121359749180").channels._cache.find(a => a.name == "logs")
   //HOW TO USE LOG()
   log("BOTSTATUS", "#333333", {"bot": "Windu", "status": "online"})
   //
+  console.log(bot.guilds)
 
   console.clear()
 	console.info(`Logged in as \u001b[36m${bot.user.tag.replace("#","\u001b[38;5;208m#")}\u001b[0m!`)
